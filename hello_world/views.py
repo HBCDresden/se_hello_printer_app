@@ -1,9 +1,9 @@
 from hello_world import app
-from formater import get_formatted
-from formater import SUPPORTED, PLAIN
+from hello_world.formater import get_formatted
+from hello_world.formater import SUPPORTED, PLAIN
 from flask import request
 
-moje_imie = "Natalia"
+moje_imie = "Inigo"
 msg = "Hello World!"
 
 @app.route('/')
