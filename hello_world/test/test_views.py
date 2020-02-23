@@ -14,12 +14,13 @@ class FlaskrTestCase(unittest.TestCase):
 
     def test_msg_with_output(self):
         name = 'Krzysiu'
-        data_test = b'{ "imie":"' + name + '", "mgs":"Hello World!"}'
+        data_test = '{"imie": "' + name + '", "msg": "Hello World!"}'
         rv = self.app.get('/?output=json&name=' + name)
         self.assertEqual(data_test, rv.data)
 
     def test_message_with_xml_output(self):
         name = 'Krzysiu'
-        data_test = '<greetings><name>'+ name +' ' + '</name><msg>Hello World!</msg></greetings>'
+        data_test = '<greetings><name>' + name + ' ' + \
+            '</name><msg>Hello World!</msg></greetings>'
         xml = self.app.get('/?output=xml&name=' + name)
         self.assertEqual(data_test, xml.data)
