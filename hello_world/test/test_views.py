@@ -5,6 +5,8 @@ from hello_world.formater import SUPPORTED
 
 name = 'Krzysiu'
 msg = 'Hello World!'
+
+
 class FlaskrTestCase(unittest.TestCase):
     def setUp(self):
         app.config['TESTING'] = True
