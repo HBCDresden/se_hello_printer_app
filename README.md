@@ -5,21 +5,20 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
 
 - Rozpoczynając pracę z projektem (wykorzystując virtualenv). Hermetyczne środowisko dla pojedynczej aplikacji w python-ie:
 
+  # Tworzymy hermetyczne środowisko dla bibliotek aplikacji:
   ```
+  $ python3 -m venv .venv
 
-
-  # tworzymy hermetyczne środowisko dla bibliotek aplikacji:
-$ python3 -m venv .venv
-
-# aktywowanie hermetycznego środowiska
+# Aktywowanie hermetycznego środowiska
+```
 $ source .venv/bin/activate
+
 $ pip install -r requirements.txt
+
 $ pip install -r test_requirements.txt
-  ```
 
-  Sprawdź: [documentację virtualenvwrappera](https://virtualenvwrapper.readthedocs.io/en/latest/command_ref.html)s oraz [biblioteki flask](http://flask.pocoo.org).
-
-- Uruchamianie applikacji:
+```
+# Uruchamianie applikacji:
 
   ```
   # jako zwykły program
@@ -34,30 +33,27 @@ $ pip install -r test_requirements.txt
   ```
   $ PYTHONPATH=. py.test
   $ PYTHONPATH=. py.test  --verbose -s
+  lub komendą:
+  $ make test
+
   ```
 
-- Kontynuując pracę z projektem, aktywowanie hermetycznego środowiska dla aplikacji py:
 
-  ```
-  $ source /usr/local/bin/virtualenvwrapper.sh # nie trzeba, jeśli już w .bashrc
-  $ workon wsb-simple-flask-app
-
-  ...
-
-  # deaktywacja virtualenv
+# Deaktywacja virtualenv
   $ deactivate
-  ```
+  
 
-- Integracja z TravisCI:
-
-  ```
-  # miejsce na twoje notatki
-  ```
+# Statuscake
+```
+Test appki Heroku:
+- Odpalany co 5 minut
+- Test HTTP
+```
 
 
 # Pomocnicze
 
-## Ubuntu
+# Ubuntu
 
 - Instalacja python virtualenv i virtualenvwrapper:
 
@@ -68,10 +64,10 @@ $ pip install -r test_requirements.txt
 
 - Instalacja dockera: [dockerce howto](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 
-# Materiały
 
-- https://virtualenvwrapper.readthedocs.io/en/latest/
+# Travis Status
 
+[![Build Status](https://travis-ci.org/HBCDresden/se_hello_printer_app.svg?branch=master)](https://travis-ci.org/HBCDresden/se_hello_printer_app)
 
-
-Modyfikacja readme bla bla
+# Statuscake uptime
+![Website Status Monitoring](https://app.statuscake.com/button/index.php?Track=hTsFYZ0rzF&Days=1&Design=2)
