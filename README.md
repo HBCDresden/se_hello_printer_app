@@ -8,16 +8,13 @@ o Continuous Integration, Continuous Delivery i Continuous Deployment.
   ```
 
 
-  # ubuntu, add to ~/.bashrc
-  $ source /usr/local/bin/virtualenvwrapper.sh
-
   # tworzymy hermetyczne środowisko dla bibliotek aplikacji:
-  $ mkvirtualenv wsb-simple-flask-app
-  $ pip install -r requirements.txt
-  $ pip install -r test_requirements.txt
+$ python3 -m venv .venv
 
-  albo z Makefile:
-  $ make deps
+# aktywowanie hermetycznego środowiska
+$ source .venv/bin/activate
+$ pip install -r requirements.txt
+$ pip install -r test_requirements.txt
   ```
 
   Sprawdź: [documentację virtualenvwrappera](https://virtualenvwrapper.readthedocs.io/en/latest/command_ref.html)s oraz [biblioteki flask](http://flask.pocoo.org).
